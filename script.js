@@ -18,7 +18,7 @@ function primitiveMultiply(a, b) {
 
 function reliableMultiply(a, b) {
   try {
-
+    return primitiveMultiply(a, b);    //this tries the function above to see if it works
   } catch {
 
   }
