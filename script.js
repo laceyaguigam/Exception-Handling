@@ -17,5 +17,10 @@ function primitiveMultiply(a, b) {
 }
 
 function reliableMultiply(a, b) {
-  // Your code here.
+  try {
+
+  } catch {
+
+  }
 }
+console.log(reliableMultiply(8 , 8));
