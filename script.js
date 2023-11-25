@@ -19,8 +19,12 @@ function primitiveMultiply(a, b) {
 function reliableMultiply(a, b) {
   try {
     return primitiveMultiply(a, b);    //this tries the function above to see if it works
-  } catch {
-
+  } catch (e) {   //not sure what e is but used it because it was used int he example in the book
+    if (e instanceof MultiplicatorUnitFailure) {  //used MultiplcatorUnitFailure because that what indicates there was an error
+      return reliableMultiply(a, b);  //return this because function because that is the name of the function we are using to test if the code will fail?
+    } else {
+      throw e;  //not sure what this does, i think it will throw e if the code does not fail, used it because it was in the example in the book
+    }
   }
 }
 console.log(reliableMultiply(8 , 8));
